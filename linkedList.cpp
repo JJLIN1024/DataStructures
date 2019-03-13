@@ -45,7 +45,7 @@ linkedList::~linkedList(){
 }
 
 void linkedList::printList(){
-    
+
     if (head == NULL){
         cout << "The list is empty!" << endl;
         return;
@@ -84,12 +84,12 @@ listNode* linkedList::insertNode(int index, int value){
         currNode = currNode->next;
         currIndex++;
     }
-    
+
     if(index>0 and currNode==NULL) return NULL;
-    
+
     listNode* newNode = new listNode;
     newNode->data = value;
-    
+
     if (index==0){
         newNode->next = head;
         head = newNode;
